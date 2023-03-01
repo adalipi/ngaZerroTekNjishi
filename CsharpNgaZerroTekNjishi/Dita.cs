@@ -16,11 +16,16 @@ namespace CsharpNgaZerroTekNjishi.TestKlasa1
         public int y;//defino variabel publike me emrin y,
 
         //metode publike qe mund te qaset nga jashte dhe qe thirr 2 funksione lokale (te brendshme) dhe 1 metode lokale (te brendshme)
-        public void Ejashtme()
+        public void Ejashtme(int numri_i_pare)
         {
-            int shuma = mbledhjaDyNumrave((-4), (6.9), (6));
-            int shumaTjeter = mbledhjaDyNumrave(3, 5);
-            shenoNeConsole(shuma.ToString());
+
+            int shuma = mbledhjaDyNumrave(numri_i_pare, KlasaStatike.variableEpare);
+
+            string shumaSiTekst = KlasaStatike.numerNeTekst(shuma);
+            
+            shenoNeConsole(shumaSiTekst);
+
+            
         }
         
         //metode lokale, mbingarkim, sepse ekzistojne edhe dy metoda me emrin e njejte por numrin ose tipin e parametrave e kane tjeter
@@ -38,8 +43,8 @@ namespace CsharpNgaZerroTekNjishi.TestKlasa1
         //metode lokale, mbingarkim, sepse ekzistojne edhe dy metoda me emrin e njejte por numrin ose tipin e parametrave e kane tjeter
         int mbledhjaDyNumrave(int parametri2, int parametri1)
         { 
-            int shuma = parametri1 + parametri2;//mlidhi vlerat e dy parametrave dhe mbaji ne variablen shuma
-            return shuma;//ktheje vleren e variables shuma
+            return parametri1 + parametri2;//mlidhi vlerat e dy parametrave dhe mbaji ne variablen shuma
+            //return shuma;//ktheje vleren e variables shuma
         }
 
         //metode lokale - private qe mund te thirret vetem nga brenda metodat e kesaj klase dhe jo nga jasht sepse nuk e ka public para void

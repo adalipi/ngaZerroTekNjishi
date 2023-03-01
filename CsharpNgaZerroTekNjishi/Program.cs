@@ -5,6 +5,7 @@ namespace CsharpNgaZerroTekNjishi
 {
     internal class Program
     {
+        /*
         static void Main(string[] args)
         {
 
@@ -84,6 +85,74 @@ namespace CsharpNgaZerroTekNjishi
 
             }
             while (fillimi < 10);
+
+        }
+    
+    */
+
+        static void Main(string[] args)
+        {
+
+            int x = 8; int y = 18;
+
+            Console.WriteLine("numri i pare eshte " + x + " numri i dyte eshte " + y);
+
+            Console.WriteLine($"numri i pare eshte {{ {x} numri i dyte eshte {y}");
+
+            Console.WriteLine(string.Format("numri i pare eshte \v {1} numri i dyte eshte {0}", x, y));
+
+            /*
+            KlasaStatike.variableEpare = 10;
+
+            int x = KlasaStatike.variableEpare;
+
+            //Console.WriteLine(x);
+
+            string njiTekst = "ARJAN";
+
+            string tekst = njiTekst.Substring(2);
+
+            string tekst2 = tekst.tekstiMbrapa();
+
+            //Console.WriteLine(tekst2);
+
+            string numer = 10.numerNeTekst();
+
+            //Console.WriteLine(numer);
+
+            Nata nataESotme = new Nata();
+            nataESotme.JepeVleren(25);
+
+
+            int n1 = 0;
+            nataESotme.caktovlerenNumrit(50, out n1);
+
+            Dita eMerkure = new Dita(1, 2);
+            eMerkure.y = 6;
+
+            Dita eEnjte = new Dita(2, 3);
+            eEnjte.y = 9;
+
+            */
+
+            /*
+            Macja macja = new Macja();
+            Qeni qeni = new Qeni();
+
+            
+            Kopshti zoologjik = new Kopshti();
+
+            //zoologjik.shenonGjuhen(qeni);
+
+            //zoologjik.shenonGjuhen(macja);
+
+            Kafsha nji;
+
+            Elefanti elef = new Elefanti();
+            elef.fol();
+
+            Kafsha kafsha = new Qeni();
+            */
 
         }
     }

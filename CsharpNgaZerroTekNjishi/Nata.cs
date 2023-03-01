@@ -1,5 +1,7 @@
 ﻿
 
+using System.Runtime.CompilerServices;
+
 namespace CsharpNgaZerroTekNjishi.TestKlasa1.jk //namespace eshte grupimi i klasave
 {
     //definimi i klases public class EMRI
@@ -7,7 +9,7 @@ namespace CsharpNgaZerroTekNjishi.TestKlasa1.jk //namespace eshte grupimi i klas
     {
         //klasa mund te kete objekte te tipit te klasave tjera, por nuk guxojme te kemi lidhje dyfishe
         //nuk mundet Dita te kete Nata, dhe ne te njejten kohe Nata te kete Dita
-        Dita ditaJone = new Dita(3,5 );//ketu kemi krijuar nji anetare privat te tipit Dita te quajtur ditaJone
+        //Dita ditaJone = new Dita(3,5 );//ketu kemi krijuar nji anetare privat te tipit Dita te quajtur ditaJone
 
         //definimi i anetarit (vetise) MyProperty
         //qe direkt definojme se cfare vlere kthen ky anetare kur i qasemi si MyProperty
@@ -16,8 +18,19 @@ namespace CsharpNgaZerroTekNjishi.TestKlasa1.jk //namespace eshte grupimi i klas
         {
             get { return x; }
 
-            set { x = value;  } 
+            set { x = value; } 
         
+        }
+
+        public void JepeVleren(int vlera)
+        { 
+            KlasaStatike.variableEpare = vlera;
+        }
+
+
+        public void caktovlerenNumrit(int x, out int y)
+        {
+            y = x;
         }
 
         //ketu definojme nji anetare (veti) te tipit int dhe vleren e kthimin dhe caktimin e vleres e mbane per veti jo per x si rasti me larte
