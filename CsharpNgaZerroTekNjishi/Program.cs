@@ -221,9 +221,11 @@ namespace CsharpNgaZerroTekNjishi
 
 
             //pjesa 8
-            DateTime data = DateTime.UtcNow;
 
-            Console.WriteLine(data.ToString(), TimeZoneInfo.Local);
+            DateTime data = DateTime.UtcNow;
+            
+            Console.WriteLine(data.ToLocalTime());
+
 
             DateTime njiDate = DateTime.Now.AddDays(-10);
             //var cultura = CultureInfo.CreateSpecificCulture("sq-sq");
