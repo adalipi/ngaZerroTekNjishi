@@ -8,7 +8,7 @@ namespace CsharpNgaZerroTekNjishi
 {
     public abstract class Kafsha
     {
-        private int _private;
+        
         public string _ngjyra;
 
         protected int x;

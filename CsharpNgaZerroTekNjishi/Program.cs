@@ -1,5 +1,7 @@
 ﻿using CsharpNgaZerroTekNjishi.TestKlasa1; //keshtu duhet te thirret namespace i klases ku eshte definuar se perndryshe nuk njifet nga programi
 using CsharpNgaZerroTekNjishi.TestKlasa1.jk; //keshtu duhet te thirret namespace i klases ku eshte definuar se perndryshe nuk njifet nga programi
+using System.Globalization;
+using System.Security.Cryptography.X509Certificates;
 
 namespace CsharpNgaZerroTekNjishi
 {
@@ -93,66 +95,142 @@ namespace CsharpNgaZerroTekNjishi
         static void Main(string[] args)
         {
 
-            int x = 8; int y = 18;
-
-            Console.WriteLine("numri i pare eshte " + x + " numri i dyte eshte " + y);
-
-            Console.WriteLine($"numri i pare eshte {{ {x} numri i dyte eshte {y}");
-
-            Console.WriteLine(string.Format("numri i pare eshte \v {1} numri i dyte eshte {0}", x, y));
-
-            /*
-            KlasaStatike.variableEpare = 10;
-
-            int x = KlasaStatike.variableEpare;
-
-            //Console.WriteLine(x);
-
-            string njiTekst = "ARJAN";
-
-            string tekst = njiTekst.Substring(2);
-
-            string tekst2 = tekst.tekstiMbrapa();
-
-            //Console.WriteLine(tekst2);
-
-            string numer = 10.numerNeTekst();
-
-            //Console.WriteLine(numer);
-
-            Nata nataESotme = new Nata();
-            nataESotme.JepeVleren(25);
 
 
-            int n1 = 0;
-            nataESotme.caktovlerenNumrit(50, out n1);
 
-            Dita eMerkure = new Dita(1, 2);
-            eMerkure.y = 6;
 
-            Dita eEnjte = new Dita(2, 3);
-            eEnjte.y = 9;
 
-            */
+            ////pjesa e pare
+            //Console.WriteLine("Sheno 1 per mace, ndersa 2 per qen");            
+            //int hyrje = int.Parse(Console.ReadLine());
 
-            /*
-            Macja macja = new Macja();
-            Qeni qeni = new Qeni();
+            //IVrapuesit ivrapokafsh;
 
-            
-            Kopshti zoologjik = new Kopshti();
+            //switch (hyrje)
+            //{
+            //    case 1:
+            //    ivrapokafsh = new Macja();
+            //        break;
+            //    case 2:
+            //        ivrapokafsh = new Qeni();
+            //        break;
+            //    default:
+            //        ivrapokafsh = new Macja();
+            //        break;
 
-            //zoologjik.shenonGjuhen(qeni);
+            //}
+            //Console.Write(ivrapokafsh.Name +" ");
+            //ivrapokafsh.vrapo();
 
-            //zoologjik.shenonGjuhen(macja);
 
-            Kafsha nji;
+            ////pjesa dyte:
+            //using (Qeni qen = new Qeni())
+            //{
+            //    qen.fol();
+            //}
+            //Console.WriteLine("Fundi");
 
-            Elefanti elef = new Elefanti();
-            elef.fol();
 
-            Kafsha kafsha = new Qeni();
-            */
+
+            //pjesa e trete
+            //Upcasting
+            //Kafsha[] kafshet = new Kafsha[2];
+            //kafshet[0] = new Qeni();
+            //kafshet[1] = new Macja();
+
+
+            //foreach (Kafsha item in kafshet)
+            //{
+
+            //    Donwcasting
+            //    if (item is Qeni)
+            //    {
+
+            //    }
+            //}
+
+
+            //pjesa e katert
+            //PassRefPassValue passRefValue = new PassRefPassValue();
+            //PassRefPassValue passRefValue1 = new PassRefPassValue();
+            //PassRefPassValue passRefValue2 = new PassRefPassValue();
+
+
+            //passRefValue.PasoSiVlere(numri);
+
+
+            //Console.WriteLine(numri);
+
+            //Console.WriteLine((Vakti)3);
+
+            //MyStruct myStruct = new MyStruct();
+            //myStruct.MyProperty = 23;
+
+            //MyStruct myStruct1 = new MyStruct();
+
+
+            //pjesa 5
+            //int numri = 50;
+
+            //object obj = numri; //boxing
+
+            //int y = (int)obj; //unboxing
+
+            //int nr;
+
+
+            //int x = 10;
+
+            //x = 11;
+
+            //var dicka = 10.8;
+            //var qen = new Qeni();
+            //var xx = 6;
+
+
+            //pjesa 6
+            //dynamic test = 6;
+            //Console.WriteLine(test + 6);
+
+            //test = "fjale ";
+            //Console.WriteLine(test + 6);
+
+            //pjesa 7
+            //int nr = 1;
+            //try
+            //{
+            //   nr  = int.Parse(Console.ReadLine());
+            //   while(nr == 1) 
+            //   {
+            //        nr = int.Parse(Console.ReadLine());
+            //   }
+            //}
+            //catch (NumerException)
+            //{
+            //    nr = int.Parse(Console.ReadLine());
+                
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine($"{ex.Message}");
+            //}
+
+
+            //Console.WriteLine($"numeri qe shenuat eshte: {nr}");
+
+
+
+            //pjesa 8
+            DateTime data = DateTime.UtcNow;
+
+            //Console.WriteLine(data.ToString(), TimeZoneInfo.Local);
+
+            var njiDate = DateTime.Now.Minute;
+            Console.WriteLine(njiDate);
+            //var cultura = CultureInfo.CreateSpecificCulture("sq-sq");
+
+            //Console.WriteLine(njiDate.ToString("dddd", cultura));
+
 
         }
     }

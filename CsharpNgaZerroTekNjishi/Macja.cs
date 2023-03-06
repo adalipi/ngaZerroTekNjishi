@@ -8,8 +8,9 @@ using System.Transactions;
 
 namespace CsharpNgaZerroTekNjishi
 {
-    public class Macja : Kafsha
+    public class Macja : Kafsha, IVrapuesit
     {
+        public string Name { get { return "Macja"; } }
 
         public override void fol()
         {
@@ -26,9 +27,35 @@ namespace CsharpNgaZerroTekNjishi
             base.fol();
         }
 
+        public void mm(object n)
+        { 
+            
+        }
         public override void leviz()
         {
             Console.WriteLine("Ec");
+        }
+
+
+
+        public void vrapo()
+        {
+
+
+            Console.WriteLine("vrapon ngadale");
+        }
+
+        dynamic shembull;
+
+
+        public void shenoTeskt()
+        {
+            shembull = "arjan dalipi";
+        }
+
+        public void shenoNumer()
+        {
+            shembull = 5;
         }
 
     }
