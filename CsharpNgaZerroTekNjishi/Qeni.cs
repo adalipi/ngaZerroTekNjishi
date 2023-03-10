@@ -13,9 +13,15 @@ namespace CsharpNgaZerroTekNjishi
         public Qeni()
         {
             x = 10;
+            Console.WriteLine(x);
         }
 
-        public string Name { get { return "Qeni"; } }
+        
+        public string Name { get { return "Qeni"; }  } 
+
+        public string Surname { get; set; }
+
+        public string Age { get { return "5"; } }
 
         public void Dispose()
         {

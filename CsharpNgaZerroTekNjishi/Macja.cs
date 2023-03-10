@@ -12,6 +12,9 @@ namespace CsharpNgaZerroTekNjishi
     {
         public string Name { get { return "Macja"; } }
 
+        public int MyProperty { get; set; }
+        public int MyProperty2 { get; set; }
+
         public override void fol()
         {
             Console.WriteLine("mjaullon");

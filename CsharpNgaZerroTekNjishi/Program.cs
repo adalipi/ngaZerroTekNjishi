@@ -1,7 +1,9 @@
 ﻿using CsharpNgaZerroTekNjishi.TestKlasa1; //keshtu duhet te thirret namespace i klases ku eshte definuar se perndryshe nuk njifet nga programi
 using CsharpNgaZerroTekNjishi.TestKlasa1.jk; //keshtu duhet te thirret namespace i klases ku eshte definuar se perndryshe nuk njifet nga programi
+using System.ComponentModel;
 using System.Globalization;
 using System.Security.Cryptography.X509Certificates;
+using System.Text;
 
 namespace CsharpNgaZerroTekNjishi
 {
@@ -92,13 +94,9 @@ namespace CsharpNgaZerroTekNjishi
     
     */
 
+        /*
         static void Main(string[] args)
         {
-
-
-
-
-
 
             ////pjesa e pare
             //Console.WriteLine("Sheno 1 per mace, ndersa 2 per qen");            
@@ -222,16 +220,170 @@ namespace CsharpNgaZerroTekNjishi
 
             //pjesa 8
 
-            DateTime data = DateTime.UtcNow;
+            //DateTime data = DateTime.UtcNow;
             
-            Console.WriteLine(data.ToLocalTime());
+            //Console.WriteLine(data.ToLocalTime());
 
 
-            DateTime njiDate = DateTime.Now.AddDays(-10);
+           // DateTime njiDate = DateTime.Now.AddDays(-10);
             //var cultura = CultureInfo.CreateSpecificCulture("sq-sq");
 
             //Console.WriteLine(njiDate.ToString("dddd", cultura));
 
+
+        }
+    */
+
+
+        //ligjerata e 6:
+        static void Main(string[] args)
+        {
+            //1:
+            //Class1 obj = new Class1();
+            //var shuma = obj.funksioniMledhje(6, 7);
+            // (int shume, int v1, int v2) = obj.funksioniMledhjeDyNumra(2,3);
+            // Console.WriteLine(shume + v1 + v2);
+            // var test = obj.test1();
+
+
+            //2:
+
+            //jo mire:
+            //string teksti = "";
+            //for (int i = 1; i <= 10; i++)
+            //{
+            //    teksti += i;
+            //    if(i == 10)
+            //        teksti += ".";
+            //    else
+            //        teksti += ", ";
+            //}
+            //Console.WriteLine(teksti);
+
+            //2
+            //i mire:
+            //StringBuilder teksti1 = new StringBuilder();
+            //for (int i = 1; i <= 10; i++)
+            //{
+            //    teksti1.Append(i);
+            //    if (i == 10)
+            //        teksti1.Append(".");
+            //    else
+            //        teksti1.Append(", ");
+            //}
+
+            //string perfundimi = teksti1.ToString();
+            //Console.WriteLine(perfundimi);
+
+
+
+            //3. Reflection
+            //var qen = new Qeni();
+            //qen.Surname = "i Sharrit";
+
+            //var qen2 = new Qeni();
+            //qen2.Surname = "Haski";
+
+            //var vetite = qen.GetType().GetProperties();
+            //foreach (var item in vetite)
+            //{
+            //    Console.Write(item.Name);
+            //    Console.Write(": ");
+            //    Console.WriteLine(item.GetValue(qen2));
+            //}
+
+            //var metodat = qen2.GetType().GetMethods();
+
+            //foreach (var item in metodat)
+            //{
+            //    if(item.IsConstructor)
+            //        item.Invoke(qen, new object[] { });
+            //}
+
+            //var m1 = qen2.GetType().GetMethod("fol").Invoke(qen2, null);
+            //var dita1 = new Dita(5,5);
+            //var dita = Activator.CreateInstance(typeof(Dita), new object[] { 10, 20 });
+
+
+            //var perMace = new GenericsAndReflection<Macja>();
+            //var perQen = new GenericsAndReflection<Qeni>();
+
+            //perMace.ListoVetite();
+            //perQen.ListoVetite();
+
+            
+            var list = new List<string>(); //todo check cka eshte int capacity
+            var list2 = new List<int>();
+            list.Add("Arjan");
+            list.Add("Alban");
+            list.Add("Gentrit");
+            list.Add("Fabjon");
+            list.Add("Florid");
+            list.Add("Barlet");
+            list.Add("Megazone");
+
+
+            list.AddRange(new List<string>() { "a", "b", "c", "d", "e" });
+            
+            list.Remove("a");
+
+            //var madhesia = list.Count;
+
+            //Console.WriteLine( madhesia );
+            //foreach (var item in list)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //var l = new List<IVrapuesit>();
+            //l.Add(new Qeni());
+            //l.Add(new Macja());
+
+            //foreach (var item in l)
+            //{
+            //    if (item.GetType() == typeof(Qeni))
+            //    { 
+                    
+            //    }
+            //}
+
+
+            //LinkedList<int> listaLidhur = new LinkedList<int>();
+            //var ditari = new Dictionary<string, Qeni>();
+
+            //ditari.Add("qenisharrit", new Qeni { Surname = "QenSharri" });
+            //ditari.Add("qeniibardh", new Qeni { Surname = "QenBardh" });
+
+            //var qen = ditari["qenisharrit"];
+            
+
+            Stack<int> ints= new Stack<int>();
+            ints.Push(11);
+            ints.Push(12);
+            ints.Push(13);
+            ints.Push(14);
+            ints.Push(15);
+            ints.Push(16);
+
+            //Console.WriteLine(ints.Count);
+            //Console.WriteLine(ints.Pop());
+            //Console.WriteLine(ints.Pop());
+            //Console.WriteLine(ints.Count);
+            //Console.WriteLine(ints.Pop());
+
+            //Console.WriteLine(ints.Count);
+
+
+            Queue<int> q= new Queue<int>();
+
+            q.Enqueue(1);
+            q.Enqueue(2);
+            q.Enqueue(3);
+
+            Console.WriteLine(q.Count);
+            Console.WriteLine(q.Dequeue());
+            Console.WriteLine(q.Dequeue());
+            Console.WriteLine(q.Count);
 
         }
     }
