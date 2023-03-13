@@ -8,7 +8,9 @@ namespace CsharpNgaZerroTekNjishi
 {
     public abstract class Kafsha
     {
-        
+
+        public string Emri { get; set; }
+
         public string _ngjyra;
 
         protected int x;

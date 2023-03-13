@@ -236,7 +236,7 @@ namespace CsharpNgaZerroTekNjishi
 
 
         //ligjerata e 6:
-        static void Main(string[] args)
+        /*static void Main(string[] args)
         {
             //1:
             //Class1 obj = new Class1();
@@ -311,21 +311,8 @@ namespace CsharpNgaZerroTekNjishi
             //perMace.ListoVetite();
             //perQen.ListoVetite();
 
-            
-            var list = new List<string>(); //todo check cka eshte int capacity
-            var list2 = new List<int>();
-            list.Add("Arjan");
-            list.Add("Alban");
-            list.Add("Gentrit");
-            list.Add("Fabjon");
-            list.Add("Florid");
-            list.Add("Barlet");
-            list.Add("Megazone");
 
 
-            list.AddRange(new List<string>() { "a", "b", "c", "d", "e" });
-            
-            list.Remove("a");
 
             //var madhesia = list.Count;
 
@@ -343,7 +330,7 @@ namespace CsharpNgaZerroTekNjishi
             //{
             //    if (item.GetType() == typeof(Qeni))
             //    { 
-                    
+
             //    }
             //}
 
@@ -355,36 +342,115 @@ namespace CsharpNgaZerroTekNjishi
             //ditari.Add("qeniibardh", new Qeni { Surname = "QenBardh" });
 
             //var qen = ditari["qenisharrit"];
+
+
+            //Stack<int> ints= new Stack<int>();
+            //ints.Push(11);
+            //ints.Push(12);
+            //ints.Push(13);
+            //ints.Push(14);
+            //ints.Push(15);
+            //ints.Push(16);
+
+            //Console.WriteLine(ints.Count);
+            //Console.WriteLine(ints.Pop());
+            //Console.WriteLine(ints.Pop());
+            //Console.WriteLine(ints.Count);
+            //Console.WriteLine(ints.Pop());
+
+            //Console.WriteLine(ints.Count);
+
+
+            //Queue<int> q= new Queue<int>();
+
+            //q.Enqueue(1);
+            //q.Enqueue(2);
+            //q.Enqueue(3);
+
+            //Console.WriteLine(q.Count);
+            //Console.WriteLine(q.Dequeue());
+            //Console.WriteLine(q.Dequeue());
+            //Console.WriteLine(q.Count);
+
+
+
+
+            //ligejrata e 7 LINQ
+
+            var list = new List<string>();
+            list.Add("Gentrit");
+            list.Add("Fabjon");
+            list.Add("Arjan");
+            list.Add("Florid");
+            list.Add("Barlet");
+            list.Add("Alban");
+            list.Add("Megazone");
+            list.Add("S");
+
+            //list.AddRange(new List<string>() { "a", "b", "c", "d", "e" });
+
+
+            var listaEManipuluar = list.Where(a => a.EndsWith("t") && a.Any(b => b == 'l'));
+
+
+            //var kushti = list.OrderBy(a => a);
+
+            //Console.Write(kushti);
+
+            //foreach (var item in listaEManipuluar)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+
+            var listaKafsheve = new List<Kafsha>();
+            listaKafsheve.Add(new Qeni { Emri = "Qeni i Sharrit" });
+            listaKafsheve.Add(new Elefanti { Emri = "Elefanti i Indise" });
+            listaKafsheve.Add(new Macja { Emri = "Macja e Persise" });
             
-
-            Stack<int> ints= new Stack<int>();
-            ints.Push(11);
-            ints.Push(12);
-            ints.Push(13);
-            ints.Push(14);
-            ints.Push(15);
-            ints.Push(16);
-
-            //Console.WriteLine(ints.Count);
-            //Console.WriteLine(ints.Pop());
-            //Console.WriteLine(ints.Pop());
-            //Console.WriteLine(ints.Count);
-            //Console.WriteLine(ints.Pop());
-
-            //Console.WriteLine(ints.Count);
+            var lista2 = listaKafsheve.Where(s => s.Emri.Length > 2).FirstOrDefault(a => a.Emri == "");
 
 
-            Queue<int> q= new Queue<int>();
 
-            q.Enqueue(1);
-            q.Enqueue(2);
-            q.Enqueue(3);
 
-            Console.WriteLine(q.Count);
-            Console.WriteLine(q.Dequeue());
-            Console.WriteLine(q.Dequeue());
-            Console.WriteLine(q.Count);
+            //Console.WriteLine(lista2?.Emri);
 
+            //List<List<int>> lists = new List<List<int>> {
+            //    new List<int> {1, 2, 3},
+            //    new List<int> {12},
+            //    new List<int> {5, 6, 5, 7},
+            //    new List<int> {10, 10, 10, 12}
+            //}; // Will return { 1, 2, 3, 12, 5, 6, 7, 10, 12 } 
+            
+            //IEnumerable<int> result = lists.SelectMany(list => list.Distinct()).Distinct();
+
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+        }
+    
+    |*/
+
+
+        static void Main(string[] arg)
+        {
+
+            var ngjarje = new NgjarjaEvent();
+            ngjarje.NumriChanged += Ngjarje_NumriChanged;
+            
+            while (true)
+            {
+                Console.WriteLine("Sheno numrin: ");
+                var vlera = int.Parse(Console.ReadLine());
+                ngjarje.setNumri(vlera);
+            }
+        }
+
+        private static void Ngjarje_NumriChanged(object? sender, ArgumentetENgjarjes e)
+        {
+            Console.WriteLine("Vlera per _numri ndryshoi, dhe vlera eshte " + e.vlera);
         }
     }
 }
